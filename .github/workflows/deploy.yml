@@ -33,5 +33,5 @@ jobs:
         protocol: ftps
         port: 21
         local-dir: ./dist/
-        server-dir: /
+        server-dir: /domains/edevcore.com/public_html/audioespacial/
         # dangerous-clean-slate: true
