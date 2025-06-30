@@ -4,10 +4,150 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Simulador de Audio Espacial | eDev Core</title>
+    <meta name="description" content="Simulador de audio espacial open source con licencia MIT, desarrollado por eDev Core. Innovación, accesibilidad y tecnología para todos.">
+    <meta property="og:title" content="Simulador de Audio Espacial | eDev Core">
+    <meta property="og:description" content="Simulador de audio espacial open source con licencia MIT, desarrollado por eDev Core.">
+    <meta property="og:image" content="/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edevcore.com/audioespacial/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Simulador de Audio Espacial | eDev Core">
+    <meta name="twitter:description" content="Simulador de audio espacial open source con licencia MIT, desarrollado por eDev Core.">
+    <meta name="twitter:image" content="/favicon.png">
+    <link rel="canonical" href="https://edevcore.com/audioespacial/">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+      .edevcore-footer-centered {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 0 1rem 0;
+        background: transparent;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+      }
+      .edevcore-branding {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #fff;
+        background: rgba(0,0,0,0.15);
+        border-radius: 1.5rem;
+        padding: 0.4rem 1.2rem 0.4rem 0.8rem;
+        box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+      }
+      .edevcore-logo {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        margin-right: 0.2rem;
+      }
+      .edevcore-name {
+        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: #fff;
+        margin-right: 0.7rem;
+      }
+      .edevcore-name a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .edevcore-name a:hover {
+        color: #00e6d0;
+      }
+      .edevcore-open-source {
+        font-size: 0.98rem;
+        font-weight: 400;
+        color: #e0e0e0;
+        margin-left: 0.5rem;
+        opacity: 0.85;
+      }
+      @media (max-width: 600px) {
+        .edevcore-branding {
+          font-size: 0.98rem;
+          padding: 0.3rem 0.7rem 0.3rem 0.5rem;
+          gap: 0.4rem;
+        }
+        .edevcore-logo {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .edevcore-footer {
+        position: fixed;
+        right: 2.2em;
+        bottom: 2.2em;
+        z-index: 1000;
+        background: #071729;
+        color: #e0f6ff;
+        padding: 0.45em 1.4em 0.45em 1.1em;
+        border-radius: 1.3em 0.8em 1.3em 0.8em;
+        font-size: 1.08rem;
+        font-family: var(--bp-font, 'JetBrains Mono', 'Montserrat', Arial, sans-serif);
+        box-shadow: 0 4px 18px 0 rgba(0,0,0,0.13);
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        letter-spacing: 0.3px;
+        opacity: 0.97;
+        border: 1.5px solid #11b1ff33;
+        backdrop-filter: blur(2px);
+        transition: opacity 0.2s, background 0.2s, box-shadow 0.2s;
+      }
+      .edevcore-footer:hover {
+        opacity: 1;
+        background: #112a3f;
+        box-shadow: 0 6px 24px 0 rgba(17,177,255,0.10);
+      }
+      .edevcore-footer a {
+        color: #11b1ff;
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1.5px dotted #11b1ff;
+        transition: color 0.2s, border-bottom 0.2s;
+      }
+      .edevcore-footer a:hover {
+        color: #fff;
+        border-bottom: 1.5px solid #11b1ff;
+      }
+      .edevcore-footer img {
+        box-shadow: 0 2px 8px 0 rgba(17,177,255,0.10);
+        background: rgba(255,255,255,0.03);
+        padding: 2px;
+      }
+      .edevcore-footer-1 { bottom: 1.2em; }
+      .edevcore-footer-2 { bottom: 4.2em; }
+      .edevcore-footer-3 { bottom: 7.2em; }
+      .edevcore-footer-4 { bottom: 10.2em; }
+      .edevcore-footer-5 { bottom: 13.2em; }
+      .edevcore-footer-6 { bottom: 16.2em; }
+      .edevcore-footer-7 { bottom: 19.2em; }
+      .edevcore-footer-8 { bottom: 22.2em; }
+      .edevcore-footer-9 { bottom: 25.2em; }
+      .edevcore-footer-10 { bottom: 28.2em; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <footer class="edevcore-footer edevcore-footer-1">
+      <span>
+        <span style="display: inline-flex; align-items: center; gap: 6px">
+          Open Source <span style="opacity:0.65; font-size:0.98em; margin: 0 2px;">|</span> MIT —
+          <img src="/favicon.png" alt="eDev Core logo" style="height: 22px; width: 22px; border-radius: 50%; margin-right: 6px; vertical-align: middle; filter: brightness(0) invert(1)" />
+          <a href="https://edevcore.com" target="_blank" rel="noopener noreferrer">eDev Core</a>
+        </span>
+      </span>
+    </footer>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
