@@ -1,0 +1,17 @@
+/* src/blueprint.css */
+:root {
+  --bp-bg: #071729;              /* fondo general  */
+  --bp-grid: rgba(33,145,255,.22);/* mismo cian, +brillo y +opacidad */
+  --bp-accent: #11b1ff;          /* cian brillante */
+  --bp-text: #e6f7ff;            /* texto botones  */
+  --bp-muted: #8fbce8;
+  --bp-radius: .5rem;
+  --bp-font: 'JetBrains Mono', 'Share Tech Mono', monospace;
+}
+
+html,body,#root{
+  width:100%;height:100%;margin:0;
+  background: var(--bp-bg);
+  color:var(--bp-text);
+  font-family:var(--bp-font);
+}
