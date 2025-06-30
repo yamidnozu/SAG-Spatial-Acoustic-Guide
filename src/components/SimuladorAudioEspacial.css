@@ -18,7 +18,7 @@ body {
 
 .sim-title {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   max-width: 40rem;
 }
 .sim-title h1 {
@@ -29,7 +29,7 @@ body {
 }
 .sim-title p {
   color: #52525b; /* gris oscuro */
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 .sim-title .sim-headphones {
   font-weight: 700;
@@ -175,7 +175,7 @@ body {
 }
 
 #simulation-controls {
-  margin: 1.5rem 0 1rem 0;
+  margin: 0.5rem 0 0.2rem 0;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -227,7 +227,7 @@ body {
 }
 
 .my-4 {
-  margin: 1.5rem 0 !important;
+  margin: 0 !important;
 }
 
 /*  -----  H I G H L I G H T   D E   R E J I L L A  -----  */
@@ -277,4 +277,16 @@ body {
       transparent calc(var(--cell) - var(--thick)),
       var(--bp-accent) calc(var(--cell) - var(--thick)) var(--cell)
   );
+}
+
+@media (max-width: 600px) {
+  .sim-title {
+    margin-bottom: 0.3rem;
+  }
+  .sim-title p {
+    margin-top: 0.1rem;
+  }
+  #simulation-controls {
+    margin: 0.2rem 0 0.1rem 0;
+  }
 }
